@@ -21,27 +21,6 @@
         <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1-sources.jar"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
-    <path id="run.AllTests.classpath">
-        <path refid="1.classpath"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1.jar"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1-javadoc.jar"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1-sources.jar"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.MyLinkedListTest.classpath">
-        <path refid="1.classpath"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1.jar"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1-javadoc.jar"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1-sources.jar"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.testMyLinkedList.classpath">
-        <path refid="1.classpath"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1.jar"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1-javadoc.jar"/>
-        <pathelement location="E:/下载/commons-math3-3.6.1-bin/commons-math3-3.6.1/commons-math3-3.6.1-sources.jar"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
@@ -89,7 +68,7 @@
             <formatter type="xml"/>
             <test name="org.apache.commons.math3.util.AllTests" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
-            <classpath refid="run.AllTests.classpath"/>
+            <classpath refid="1.classpath"/>
         </junit>
     </target>
     <target name="MyLinkedListTest">
@@ -98,12 +77,12 @@
             <formatter type="xml"/>
             <test name="org.apache.commons.math3.util.MyLinkedListTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
-            <classpath refid="run.MyLinkedListTest.classpath"/>
+            <classpath refid="1.classpath"/>
         </junit>
     </target>
     <target name="testMyLinkedList">
         <java classname="test.testMyLinkedList" failonerror="true" fork="yes">
-            <classpath refid="run.testMyLinkedList.classpath"/>
+            <classpath refid="1.classpath"/>
         </java>
     </target>
     <target name="junitreport">
