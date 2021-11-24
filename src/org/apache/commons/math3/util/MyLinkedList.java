@@ -106,7 +106,7 @@ public class MyLinkedList {
         if (equals(x, y, eps)) {
             return 0;
         } else if (x < y) {
-            return 2;
+            return -1;
         }
         return 1;
     }
